@@ -18,7 +18,7 @@ export default async function SignUpPage() {
   const NEXT_PUBLIC_DISABLE_SIGNUP = env('NEXT_PUBLIC_DISABLE_SIGNUP');
 
   if (NEXT_PUBLIC_DISABLE_SIGNUP === 'true') {
-    redirect('/signin');
+    redirect('/');
   }
 
   return (
