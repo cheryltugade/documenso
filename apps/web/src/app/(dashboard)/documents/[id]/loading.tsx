@@ -11,7 +11,7 @@ export default async function Loading() {
 
   return (
     <div className="mx-auto -mt-4 flex w-full max-w-screen-xl flex-col px-4 md:px-8">
-      <Link href="/documents" className="flex grow-0 items-center text-[#7AC455] hover:opacity-80">
+      <Link href="/documents" className="flex grow-0 items-center text-[#000000] hover:opacity-80">
         <ChevronLeft className="mr-2 inline-block h-5 w-5" />
         <Trans>Documents</Trans>
       </Link>
@@ -35,7 +35,7 @@ export default async function Loading() {
           </div>
         </div>
 
-        <div className="bg-background border-border col-span-12 rounded-xl border-2  before:rounded-xl lg:col-span-6 xl:col-span-5" />
+        <div className="bg-background border-border col-span-12 rounded-xl border-2 before:rounded-xl lg:col-span-6 xl:col-span-5" />
       </div>
     </div>
   );

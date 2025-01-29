@@ -12,11 +12,9 @@ import {
   Download,
   Edit,
   EyeIcon,
-  Loader,
   MoreHorizontal,
   MoveRight,
   Pencil,
-  Share,
   Trash2,
 } from 'lucide-react';
 import { useSession } from 'next-auth/react';
@@ -27,7 +25,6 @@ import { DocumentStatus, RecipientRole } from '@documenso/prisma/client';
 import type { Document, Recipient, Team, User } from '@documenso/prisma/client';
 import type { DocumentWithData } from '@documenso/prisma/types/document-with-data';
 import { trpc as trpcClient } from '@documenso/trpc/client';
-import { DocumentShareButton } from '@documenso/ui/components/document/document-share-button';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -208,19 +205,6 @@ export const DataTableActionDropdown = ({ row, team }: DataTableActionDropdownPr
         )}
 
         <ResendDocumentActionItem document={row} recipients={nonSignedRecipients} team={team} />
-
-        <DocumentShareButton
-          documentId={row.id}
-          token={isOwner ? undefined : recipient?.token}
-          trigger={({ loading, disabled }) => (
-            <DropdownMenuItem disabled={disabled || isDraft} onSelect={(e) => e.preventDefault()}>
-              <div className="flex items-center">
-                {loading ? <Loader className="mr-2 h-4 w-4" /> : <Share className="mr-2 h-4 w-4" />}
-                <Trans>Share Signing Card</Trans>
-              </div>
-            </DropdownMenuItem>
-          )}
-        />
       </DropdownMenuContent>
 
       <DeleteDocumentDialog

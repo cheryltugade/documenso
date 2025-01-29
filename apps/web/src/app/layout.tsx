@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 
-import { Caveat, Inter } from 'next/font/google';
+import { Caveat, Jersey_10 } from 'next/font/google';
 
 import { AxiomWebVitals } from 'next-axiom';
 import { PublicEnvScript } from 'next-runtime-env';
@@ -20,7 +20,13 @@ import { PostHogPageview } from '~/providers/posthog';
 
 import './globals.css';
 
-const fontInter = Inter({ subsets: ['latin'], variable: '--font-sans' });
+// const fontSyndicat = { subsets: ['latin'], variable: '--font-sans' };
+const fontSyndicat = Jersey_10({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  weight: '400',
+});
+
 const fontCaveat = Caveat({ subsets: ['latin'], variable: '--font-signature' });
 
 export function generateMetadata() {
@@ -61,7 +67,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html
       lang={lang}
-      className={cn(fontInter.variable, fontCaveat.variable)}
+      className={cn(fontSyndicat.variable, fontCaveat.variable)}
       suppressHydrationWarning
     >
       <head>

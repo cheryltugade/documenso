@@ -1,13 +1,11 @@
 'use client';
 
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 import { Trans } from '@lingui/macro';
 import { motion } from 'framer-motion';
 import { ChevronLeft } from 'lucide-react';
 
-import backgroundPattern from '@documenso/assets/images/background-pattern.png';
 import { cn } from '@documenso/ui/lib/utils';
 import { Button } from '@documenso/ui/primitives/button';
 
@@ -25,18 +23,7 @@ export default function NotFoundPartial({ children }: NotFoundPartialProps) {
           className="flex h-full w-full items-center justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.8, transition: { duration: 0.5, delay: 0.5 } }}
-        >
-          <Image
-            src={backgroundPattern}
-            alt="background pattern"
-            className="-mr-[50vw] -mt-[15vh] h-full scale-100 object-cover dark:contrast-[70%] dark:invert dark:sepia md:scale-100 lg:scale-[100%]"
-            style={{
-              mask: 'radial-gradient(rgba(255, 255, 255, 1) 0%, transparent 80%)',
-              WebkitMask: 'radial-gradient(rgba(255, 255, 255, 1) 0%, transparent 80%)',
-            }}
-            priority
-          />
-        </motion.div>
+        ></motion.div>
       </div>
 
       <div className="container mx-auto flex h-full min-h-screen items-center px-6 py-32">

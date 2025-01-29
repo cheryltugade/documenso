@@ -8,7 +8,6 @@ import { Trans } from '@lingui/macro';
 import { Clock8 } from 'lucide-react';
 import { useSession } from 'next-auth/react';
 
-import signingCelebration from '@documenso/assets/images/signing-celebration.png';
 import type { Document, Signature } from '@documenso/prisma/client';
 import { SigningCard3D } from '@documenso/ui/components/signing-card';
 
@@ -30,7 +29,7 @@ export const NoLongerAvailable = ({
       <SigningCard3D
         name={recipientName}
         signature={recipientSignature}
-        signingCelebrationImage={signingCelebration}
+        // signingCelebrationImage={signingCelebration}
       />
 
       <div className="relative mt-2 flex w-full flex-col items-center">

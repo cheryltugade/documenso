@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 
 import Link from 'next/link';
 
-import signingCelebration from '@documenso/assets/images/signing-celebration.png';
 import { useFeatureFlags } from '@documenso/lib/client-only/providers/feature-flag';
 import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
 import type { Signature } from '@documenso/prisma/client';
@@ -57,7 +56,7 @@ export const SinglePlayerModeSuccess = ({
         className="mt-8"
         name={document.Recipient[0].name || document.Recipient[0].email}
         signature={signatures.at(0)}
-        signingCelebrationImage={signingCelebration}
+        // signingCelebrationImage={signingCelebration}
       />
 
       <div className="relative mt-8 w-full">

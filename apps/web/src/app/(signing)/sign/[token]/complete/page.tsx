@@ -8,7 +8,6 @@ import { getServerSession } from 'next-auth';
 import { env } from 'next-runtime-env';
 import { match } from 'ts-pattern';
 
-import signingCelebration from '@documenso/assets/images/signing-celebration.png';
 import { setupI18nSSR } from '@documenso/lib/client-only/providers/i18n.server';
 import { getServerComponentSession } from '@documenso/lib/next-auth/get-server-component-session';
 import { getDocumentAndSenderByToken } from '@documenso/lib/server-only/document/get-document-by-token';
@@ -19,7 +18,6 @@ import { getRecipientSignatures } from '@documenso/lib/server-only/recipient/get
 import { getUserByEmail } from '@documenso/lib/server-only/user/get-user-by-email';
 import { DocumentStatus, FieldType, RecipientRole } from '@documenso/prisma/client';
 import { DocumentDownloadButton } from '@documenso/ui/components/document/document-download-button';
-import { DocumentShareButton } from '@documenso/ui/components/document/document-share-button';
 import { SigningCard3D } from '@documenso/ui/components/signing-card';
 import { cn } from '@documenso/ui/lib/utils';
 import { Badge } from '@documenso/ui/primitives/badge';
@@ -123,7 +121,7 @@ export default async function CompletedSigningPage({
           <SigningCard3D
             name={recipientName}
             signature={signatures.at(0)}
-            signingCelebrationImage={signingCelebration}
+            // signingCelebrationImage={signingCelebration}
           />
 
           <h2 className="mt-6 max-w-[35ch] text-center text-2xl font-semibold leading-normal md:text-3xl lg:text-4xl">
@@ -183,8 +181,6 @@ export default async function CompletedSigningPage({
             ))}
 
           <div className="mt-8 flex w-full max-w-sm items-center justify-center gap-4">
-            <DocumentShareButton documentId={document.id} token={recipient.token} />
-
             {document.status === DocumentStatus.COMPLETED ? (
               <DocumentDownloadButton
                 className="flex-1"

@@ -12,7 +12,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['Inter', 'sans-serif'],
+      sans: ['Syndicat', 'sans-serif'],
       serif: ['Caveat', 'cursive'],
     },
   },

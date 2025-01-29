@@ -46,13 +46,7 @@ export const DocumentCreatedFromDirectTemplateEmailTemplate = ({
             <Section className="p-2">
               {branding.brandingEnabled && branding.brandingLogo ? (
                 <Img src={branding.brandingLogo} alt="Branding Logo" className="mb-4 h-6" />
-              ) : (
-                <Img
-                  src={getAssetUrl('/static/logo.png')}
-                  alt="Documenso Logo"
-                  className="mb-4 h-6"
-                />
-              )}
+              ) : null}
 
               <TemplateDocumentImage className="mt-6" assetBaseUrl={assetBaseUrl} />
 
