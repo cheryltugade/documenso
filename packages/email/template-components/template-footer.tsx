@@ -34,7 +34,11 @@ export const TemplateFooter = ({ isDocument = true }: TemplateFooterProps) => {
             );
           })}
         </Text>
-      ) : null}
+      ) : (
+        <Text className="my-8 text-sm text-slate-400">
+          Glenwood Studio LLC, Palo Alto, California
+        </Text>
+      )}
     </Section>
   );
 };

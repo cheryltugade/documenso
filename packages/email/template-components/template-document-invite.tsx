@@ -61,19 +61,19 @@ export const TemplateDocumentInvite = ({
             <>
               {includeSenderDetails ? (
                 <Trans>
-                  {inviterName} on behalf of "{teamName}" has invited you to{' '}
+                  {inviterName} on behalf of "{teamName}" sent you a document to review and{' '}
                   {_(actionVerb).toLowerCase()}
                 </Trans>
               ) : (
                 <Trans>
-                  {teamName} has invited you to {_(actionVerb).toLowerCase()}
+                  {teamName} sent you a document to review and {_(actionVerb).toLowerCase()}
                 </Trans>
               )}
               <br />"{documentName}"
             </>
           ) : (
             <Trans>
-              {inviterName} has invited you to {_(actionVerb).toLowerCase()}
+              {inviterName} sent you a document to review and {_(actionVerb).toLowerCase()}
               <br />"{documentName}"
             </Trans>
           )}
@@ -90,18 +90,11 @@ export const TemplateDocumentInvite = ({
 
         <Section className="mb-6 mt-8 text-center">
           <Button
-            className="mr-4 inline-flex items-center justify-center rounded-lg bg-red-500 px-6 py-3 text-center text-sm font-medium text-black no-underline"
-            href={rejectDocumentLink}
-          >
-            <Trans>Reject Document</Trans>
-          </Button>
-
-          <Button
             className="bg-documenso-500 inline-flex items-center justify-center rounded-lg px-6 py-3 text-center text-sm font-medium text-white no-underline"
             href={signDocumentLink}
           >
             {match(role)
-              .with(RecipientRole.SIGNER, () => <Trans>Sign Document</Trans>)
+              .with(RecipientRole.SIGNER, () => <Trans>Review Document</Trans>)
               .with(RecipientRole.VIEWER, () => <Trans>View Document</Trans>)
               .with(RecipientRole.APPROVER, () => <Trans>Approve Document</Trans>)
               .with(RecipientRole.CC, () => '')

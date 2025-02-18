@@ -38,11 +38,11 @@ export const TemplateDocumentCompleted = ({
         </Section>
 
         <Text className="text-primary mb-0 text-center text-lg font-semibold">
-          {customBody || <Trans>“{documentName}” was signed by all signers</Trans>}
+          {customBody || <Trans>All parties have completed “{documentName}”.</Trans>}
         </Text>
 
         <Text className="my-1 text-center text-base text-slate-400">
-          <Trans>Continue by downloading the document.</Trans>
+          <Trans>You can download a copy for your records.</Trans>
         </Text>
 
         <Section className="mb-6 mt-8 text-center">

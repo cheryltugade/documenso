@@ -65,7 +65,7 @@ export const SignDialog = ({
         <DialogTitle>
           <div className="text-foreground text-xl font-semibold">
             {role === RecipientRole.VIEWER && <Trans>Complete Viewing</Trans>}
-            {role === RecipientRole.SIGNER && <Trans>Complete Signing</Trans>}
+            {role === RecipientRole.SIGNER && <Trans>Complete Signing?</Trans>}
             {role === RecipientRole.APPROVER && <Trans>Complete Approval</Trans>}
           </div>
         </DialogTitle>
@@ -138,7 +138,7 @@ export const SignDialog = ({
               onClick={onSignatureComplete}
             >
               {role === RecipientRole.VIEWER && <Trans>Mark as Viewed</Trans>}
-              {role === RecipientRole.SIGNER && <Trans>Sign</Trans>}
+              {role === RecipientRole.SIGNER && <Trans>Finish</Trans>}
               {role === RecipientRole.APPROVER && <Trans>Approve</Trans>}
             </Button>
           </div>

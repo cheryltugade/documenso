@@ -17,6 +17,12 @@ export default async function SignatureDisclosure() {
           <Trans>Electronic Signature Disclosure</Trans>
         </h1>
 
+        <p>
+          <Trans>
+            Glenwood Studio uses the Documenso platform for signing legal documents. Below is
+            Documenso’s Electronic Signature Disclosure.
+          </Trans>
+        </p>
         <h2>
           <Trans>Welcome</Trans>
         </h2>
@@ -104,10 +110,7 @@ export default async function SignatureDisclosure() {
           <Trans>
             You have the right to withdraw your consent to use electronic signatures at any time
             before completing the signing process. To withdraw your consent, please contact the
-            sender of the document. In failing to contact the sender you may reach out to{' '}
-            <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> for assistance. Be aware that
-            withdrawing consent may delay or halt the completion of the related transaction or
-            service.
+            sender of the document.
           </Trans>
         </p>
 
@@ -144,16 +147,6 @@ export default async function SignatureDisclosure() {
             that you have read and understood this disclosure. You agree to all terms and conditions
             related to the use of electronic signatures and electronic transactions as outlined
             herein.
-          </Trans>
-        </p>
-
-        <h2>
-          <Trans>Contact Information</Trans>
-        </h2>
-        <p>
-          <Trans>
-            For any questions regarding this disclosure, electronic signatures, or any related
-            process, please contact us at: <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
           </Trans>
         </p>
       </article>

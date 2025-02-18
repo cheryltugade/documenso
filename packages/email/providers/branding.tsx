@@ -13,9 +13,9 @@ type BrandingContextValue = {
 const BrandingContext = createContext<BrandingContextValue | undefined>(undefined);
 
 const defaultBrandingContextValue: BrandingContextValue = {
-  brandingEnabled: false,
+  brandingEnabled: true,
   brandingUrl: '',
-  brandingLogo: '',
+  brandingLogo: '/static/logo-glenwood.png',
   brandingCompanyDetails: '',
   brandingHidePoweredBy: true,
 };

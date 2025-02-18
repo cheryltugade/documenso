@@ -38,12 +38,12 @@ export const DocumentInviteEmailTemplate = ({
 
   const action = _(RECIPIENT_ROLES_DESCRIPTION[role].actionVerb).toLowerCase();
 
-  let previewText = msg`${inviterName} has invited you to ${action} ${documentName}`;
+  let previewText = msg`${inviterName} sent you a document to review and ${action}`;
 
   if (isTeamInvite) {
     previewText = includeSenderDetails
-      ? msg`${inviterName} on behalf of "${teamName}" has invited you to ${action} ${documentName}`
-      : msg`${teamName} has invited you to ${action} ${documentName}`;
+      ? msg`${inviterName} on behalf of "${teamName}" sent you a document to review and ${action}`
+      : msg`${teamName} sent you a document to review and ${action}`;
   }
 
   if (selfSigner) {
@@ -64,8 +64,18 @@ export const DocumentInviteEmailTemplate = ({
           <Container className="mx-auto mb-2 mt-8 max-w-xl rounded-lg border border-solid border-slate-200 p-4 backdrop-blur-sm">
             <Section>
               {branding.brandingEnabled && branding.brandingLogo ? (
-                <Img src={branding.brandingLogo} alt="Branding Logo" className="mb-4 h-6" />
-              ) : null}
+                <Img
+                  src={getAssetUrl(branding.brandingLogo)}
+                  alt="Branding Logo"
+                  className="mb-4 h-6"
+                />
+              ) : (
+                <Img
+                  src={getAssetUrl('/static/logo.png')}
+                  alt="Documenso Logo"
+                  className="mb-4 h-6"
+                />
+              )}
 
               <TemplateDocumentInvite
                 inviterName={inviterName}

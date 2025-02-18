@@ -125,7 +125,7 @@ export default async function CompletedSigningPage({
           />
 
           <h2 className="mt-6 max-w-[35ch] text-center text-2xl font-semibold leading-normal md:text-3xl lg:text-4xl">
-            {recipient.role === RecipientRole.SIGNER && <Trans>Document Signed</Trans>}
+            {recipient.role === RecipientRole.SIGNER && <Trans>Thank you!</Trans>}
             {recipient.role === RecipientRole.VIEWER && <Trans>Document Viewed</Trans>}
             {recipient.role === RecipientRole.APPROVER && <Trans>Document Approved</Trans>}
           </h2>
@@ -160,14 +160,14 @@ export default async function CompletedSigningPage({
             .with({ status: DocumentStatus.COMPLETED }, () => (
               <p className="text-muted-foreground/60 mt-2.5 max-w-[60ch] text-center text-sm font-medium md:text-base">
                 <Trans>
-                  Everyone has signed! You will receive an Email copy of the signed document.
+                  Everyone has signed! You will receive an email copy of the signed document.
                 </Trans>
               </p>
             ))
             .with({ deletedAt: null }, () => (
               <p className="text-muted-foreground/60 mt-2.5 max-w-[60ch] text-center text-sm font-medium md:text-base">
                 <Trans>
-                  You will receive an Email copy of the signed document once everyone has signed.
+                  You will receive an email copy of the signed document once everyone has signed.
                 </Trans>
               </p>
             ))
