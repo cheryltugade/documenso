@@ -30,6 +30,10 @@ export const TeamJoinEmailTemplate = ({
 
   const previewText = msg`A team member has joined a team on Documenso`;
 
+  const getAssetUrl = (path: string) => {
+    return new URL(path, assetBaseUrl).toString();
+  };
+
   return (
     <Html>
       <Head />

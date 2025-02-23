@@ -28,6 +28,10 @@ export const TeamEmailRemovedTemplate = ({
 
   const previewText = msg`Team email removed for ${teamName} on Documenso`;
 
+  const getAssetUrl = (path: string) => {
+    return new URL(path, assetBaseUrl).toString();
+  };
+
   return (
     <Html>
       <Head />

@@ -41,6 +41,10 @@ export const TeamInviteEmailTemplate = ({
 
   const previewText = msg`Accept invitation to join a team on Documenso`;
 
+  const getAssetUrl = (path: string) => {
+    return new URL(path, assetBaseUrl).toString();
+  };
+
   return (
     <Html>
       <Head />

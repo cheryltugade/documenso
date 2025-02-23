@@ -40,6 +40,10 @@ export const ConfirmTeamEmailTemplate = ({
 
   const previewText = msg`Accept team email request for ${teamName} on Documenso`;
 
+  const getAssetUrl = (path: string) => {
+    return new URL(path, assetBaseUrl).toString();
+  };
+
   return (
     <Html>
       <Head />

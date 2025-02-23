@@ -30,6 +30,10 @@ export const TeamLeaveEmailTemplate = ({
 
   const previewText = msg`A team member has left a team on Documenso`;
 
+  const getAssetUrl = (path: string) => {
+    return new URL(path, assetBaseUrl).toString();
+  };
+
   return (
     <Html>
       <Head />

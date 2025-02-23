@@ -36,6 +36,10 @@ export const TeamDeleteEmailTemplate = ({
     ? msg`The following team has been deleted by you`
     : msg`The following team has been deleted by its owner. You will no longer be able to access this team and its documents`;
 
+  const getAssetUrl = (path: string) => {
+    return new URL(path, assetBaseUrl).toString();
+  };
+
   return (
     <Html>
       <Head />
