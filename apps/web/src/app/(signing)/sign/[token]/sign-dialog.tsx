@@ -13,8 +13,6 @@ import {
   DialogTrigger,
 } from '@documenso/ui/primitives/dialog';
 
-import { SigningDisclosure } from '~/components/general/signing-disclosure';
-
 export type SignDialogProps = {
   isSubmitting: boolean;
   documentTitle: string;
@@ -89,13 +87,8 @@ export const SignDialog = ({
             <span>
               <Trans>
                 <span className="inline-flex flex-wrap">
-                  You are about to complete signing "
-                  <span className="inline-block max-w-[11rem] truncate align-baseline">
-                    {documentTitle}
-                  </span>
-                  ".
+                  By signing, you agree that your electronic signature is legally valid.
                 </span>
-                <br /> Are you sure?
               </Trans>
             </span>
           )}
@@ -114,8 +107,6 @@ export const SignDialog = ({
             </span>
           )}
         </div>
-
-        <SigningDisclosure className="mt-4" />
 
         <DialogFooter>
           <div className="flex w-full flex-1 flex-nowrap gap-4">
