@@ -205,8 +205,6 @@ export const AutoSign = ({ recipient, fields }: AutoSignProps) => {
           </ul>
         </div>
 
-        <SigningDisclosure className="mt-4" />
-
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <DialogFooter className="flex w-full flex-1 flex-nowrap gap-2">

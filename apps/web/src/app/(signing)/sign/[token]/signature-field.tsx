@@ -277,7 +277,7 @@ export const SignatureField = ({
           <DialogTitle>
             <Trans>
               Sign as {recipient.name}{' '}
-              <div className="text-muted-foreground h-5">({recipient.email})</div>
+              <div className="text-muted-foreground min-h-5">({recipient.email})</div>
             </Trans>
           </DialogTitle>
 
@@ -305,7 +305,6 @@ export const SignatureField = ({
             )}
           </div>
 
-          <SigningDisclosure />
           <DialogFooter>
             <div className="flex w-full flex-1 flex-nowrap gap-4">
               <Button
