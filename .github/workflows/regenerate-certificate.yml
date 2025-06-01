@@ -3,6 +3,7 @@ name: Regenerate Certificate
 on:
   schedule:
     - cron: '10 4 1 6 *'  # June 1 at 04:10 UTC = June 1 at 12:10 AM EDT
+  workflow_dispatch:
 
 jobs:
   regenerate_certificate:
@@ -57,4 +58,5 @@ jobs:
         run: |
           echo "Triggering Render deploy..."
           curl -fsSL -X POST "$RENDER_DEPLOY_HOOK"
+
 
