@@ -2,7 +2,7 @@ name: Regenerate Certificate
 
 on:
   schedule:
-    - cron: '25 23 31 5 *'  # May 31 at 7:25 PM EDT (11:25 PM UTC)
+    - cron: '25 1 1 6 *'  # June 1 at 01:25 UTC = May 31 at 9:25PM EDT
 
 jobs:
   regenerate_certificate:
@@ -50,3 +50,8 @@ jobs:
           git add apps/web/resources/certificate.p12
           git commit -m "Regenerate certificate.p12" || echo "No changes to commit"
           git push
+
+      - name: Trigger Render Deploy
+        run: |
+          curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
+
