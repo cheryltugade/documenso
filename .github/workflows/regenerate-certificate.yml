@@ -2,7 +2,7 @@ name: Regenerate Certificate
 
 on:
   schedule:
-    - cron: '0 13 2 6 *'  # June 2 at 13:00 UTC = June 2 at 9:00 AM EDT
+    - cron: '0 13 1 6 *'  # June 1 at 13:00 UTC = June 1 at 9:00 AM EDT
   workflow_dispatch:
 
 jobs:
